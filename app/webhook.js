@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 // Webhook principal
 app.post("/webhook", async (req, res) => {
   const payload = req.body;
+  console.log("TCL: payload", payload)
 
   // Ignora mensagens que não são de saída
   if (payload.message_type !== "outgoing") {
